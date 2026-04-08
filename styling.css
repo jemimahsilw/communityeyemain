@@ -1,0 +1,519 @@
+body{
+    background-color:white;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav{
+    background-color: red;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    height: 60px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+}
+.content-list{
+    list-style-type: disc;
+    display: block;
+    margin: 0.5rem 0 1rem 1.5rem;
+    padding: 0;
+    font-weight: 400;
+}
+.content-list li{
+    margin-bottom: 0.5rem;
+    font-weight:400;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    background-color:rgb(190, 5, 5);
+}
+.logo img{
+    width:100%;
+    height: 100%;;
+
+}
+#picsandname{
+    position: relative;
+    width:100%;
+    height: 500px;
+    overflow:hidden;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+/* slideshow styles */
+.slideshow{
+    width:100%;
+    height:100%;
+    right: 0;
+    left: 0;
+    position:relative;
+}
+
+/* images*/
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* active image */
+.slide.active{
+    opacity:1;
+}
+
+/*heading on top of images*/
+.title{
+    position: absolute;
+    top:73%;
+    left:40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size:2rem;
+    text-align: left;
+    font-weight: 700;
+    z-index: 2;
+    background: rgb(0, 0, 0, 0.4);
+    padding:10px 20px;
+    border-radius:5px;
+    max-width: 95%;
+    opacity: 0.7;
+}
+.title p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.938);
+    margin: 10px 0 0 0;
+    font-style: italic;
+}
+
+.heading{
+    text-align: center;
+}
+
+.visionandmission{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Vision and Mission Cards */
+.visionandmission .card{
+  box-sizing: border-box;
+  width: 5rem;
+  height: 254px;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  cursor: pointer;
+  transition: all 0.5s;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  color: black;
+  padding: 20px;
+}
+
+.visionandmission .card:hover{
+    transform:scale(1.05);
+}
+ 
+#page3{
+    background-image: url("law.jpg");
+    background-size: cover;
+    padding: 2rem 0;
+}
+
+/* General Card styles */
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  color: black;
+  padding:50px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.card:hover {
+  border: 1px solid rgb(184, 33, 45);
+  transform: scale(1.02);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.heading-with-icon ul{
+   list-style: none;
+   display: block;
+}
+
+.heading-with-icon img{
+    width:42px;
+    height:auto;
+}
+
+.servicebox1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin: 0 1rem;
+}
+
+.servicebox2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin: 0 1rem;
+}
+
+.servicebox3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin: 0 1rem;
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 90%;
+  max-width: 300px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  margin: 1rem auto;
+}
+
+.flip-card-front .title {
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  background: none;
+  padding: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background: red;
+  color: black;
+}
+
+.flip-card-back {
+  background: red;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card li{
+    font-weight: bold;
+}
+
+.card .content-list li{
+    font-weight: 400;
+}
+
+#page4{
+    box-sizing: border-box;
+}
+.heading-with-icon{
+    font-weight: 500;
+}
+.heading-with-icon ul li {
+    font-weight: 400;
+}
+
+#page5{
+    margin: 0;
+    background-color: rgb(78, 17, 17);
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+footer{
+    text-align: center;
+}
+
+footer p{
+    margin: 0.5rem 0;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .visionandmission .card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* Large phones and small tablets */
+@media (max-width: 768px) {
+    .header-container{
+        flex-direction: row;
+        height: auto;
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+    
+    .logo img{
+        height: 45px;
+    }
+    
+    .menu{
+        flex-direction: row;
+        height: auto;
+        gap: 0.3rem;
+        flex: 1;
+    }
+    
+    .menu li a{
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+    
+    button{
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    
+    #picsandname{
+        height: 300px;
+    }
+    
+    .title{
+        font-size: 1.8rem;
+        top: 50%;
+    }
+    
+    .title p{
+        font-size: 1rem;
+    }
+    
+    .visionandmission{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    .visionandmission .card {
+        width: 100%;
+        height: auto;
+        max-width: none;
+    }
+    
+    .card{
+        padding: 2rem;
+    }
+    
+    .servicebox1,
+    .servicebox2,
+    .servicebox3{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .flip-card{
+        width: 100%;
+        max-width: 350px;
+        margin: 1rem auto;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .header-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: -1;
+    }
+    
+    .logo img{
+        height: 40px;
+        width: auto;
+    }
+    
+    .menu{
+        gap: 0.1rem;
+        width: 100%;
+        justify-content: center;
+        order: 0;
+    }
+    
+    .menu li a{
+        padding: 4px 5px;
+        font-size: 10px;
+    }
+    
+    button{
+        padding: 4px 8px;
+        font-size: 7px;
+        letter-spacing: 0.2px;
+    }
+    
+    button:hover{
+        letter-spacing: 0.4px;
+    }
+    
+    #picsandname{
+        height: 200px;
+    }
+    
+    .title{
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+    
+    .title p{
+        font-size: 0.8rem;
+    }
+    
+    .heading{
+        padding: 1rem;
+    }
+    
+    .values{
+        font-size: 1.5rem;
+    }
+    #page4{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .card{
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .flip-card{
+        width: 100%;
+        max-width: none;
+        height: 250px;
+        margin: 1rem;
+    }
+    
+    .flip-card-front .title {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    .flip-card-back p{
+        font-size: 0.85rem;
+    }
+    
+    footer p{
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+    .title{
+        font-size: 1rem;
+    }
+    
+    .title p{
+        font-size: 0.7rem;
+    }
+    
+    .menu li a{
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+    
+    .card{
+        padding: 1rem;
+    }
+}
