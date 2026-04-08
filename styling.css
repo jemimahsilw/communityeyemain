@@ -321,6 +321,13 @@ footer p{
 
 /* Media Queries for Responsiveness */
 
+/*larger devices*/
+@media(max-width: 2000px) {
+.visionandmission .card {
+    width: 100%;
+    max-width: 500px;
+ }
+}
 /* Tablets and smaller desktops */
 @media (max-width: 1024px) {
     .visionandmission .card {
