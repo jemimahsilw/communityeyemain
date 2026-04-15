@@ -1,3 +1,11 @@
-Hello people,
+# Malawi Community Eye
 
-Community eye organization is a legal firm organization that suports the non state actors in accessing justice and expressing fully their human rights. 
+## Project Information
+This is a website for a company malawi community eye. showcasing their works and for customers to get intouch with them.
+
+## Technologies
+- languages: html, css, JavaScript
+
+## Deployment
+visit: https://jemimahsilw.github.io/communityeyemain/
+
